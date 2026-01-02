@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[당신의 이름] — 학술 포트폴리오</title>
-  <meta name="description" content="[당신의 이름]의 학술 프로필, 연구 분야 및 성과를 소개합니다." />
+  <title>[당신의 이름] — Academic Portfolio</title>
+  <meta name="description" content="Academic profile of [당신의 이름], [현재 신분/과정] at [학교명] researching [주요 연구 분야]." />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,11 @@
       --bg:#ffffff;
       --text:#111827;
       --muted:#4b5563;
-      --accent:#0f4c81; /* 포인트 컬러: 청색 계열 */
+      --accent:#0f4c81;
       --border:#e5e7eb;
       --link:#0f4c81;
       --card:#f9fafb;
-      --red:#b91c1c; /* 강조 컬러: 논문 제목 등 */
+      --red:#b91c1c;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Merriweather',serif;color:var(--text);background:var(--bg);line-height:1.7}
@@ -34,7 +34,6 @@
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
     
-    /* Publications 스타일 */
     .pub-list{list-style:none;margin-left:0;padding-left:0}
     .pub-list > li{margin:25px 0}
     .pub-row{display:flex;align-items:center;gap:20px}
@@ -55,7 +54,6 @@
     footer{text-align:center;border-top:1px solid var(--border);margin-top:60px;padding:20px;color:var(--muted);font-size:14px}
     .contact a{margin-right:15px;display:inline-block}
 
-    /* 모바일 대응 */
     @media (max-width: 600px) {
       .pub-row { flex-direction: column; align-items: flex-start; }
       #about { flex-direction: column; text-align: center; }
@@ -66,43 +64,42 @@
 <body>
   <header>
     <h1>[당신의 이름]</h1>
-    <p>[학교명/연구소명]<br>[학과 또는 연구실 이름]</p>
+    <p>[학교명]<br>[소속 연구실/학과]</p>
   </header>
 
   <main>
     <section id="about" style="display:flex;align-items:center;gap:30px;">
       <img src="[프로필_이미지_경로]" alt="[당신의 이름]" style="width:220px;height:220px;border-radius:50%; border:2px solid #e5e7eb;object-fit:cover;">
       <div>
-        <h2>안녕하세요! 👋</h2>
+        <h2>Welcome! 👋</h2>
         <ul style="list-style:none; margin-left:0;">
-          <li>저는 <b>[학교명]</b>에서 <b>[과정: 예: 석박사 통합과정]</b> 중인 [당신의 이름]입니다.</li>
-          <li>현재 <b>[연구실 이름]</b>에서 <b>[지도교수님 성함]</b> 교수님의 지도 아래 연구하고 있습니다.</li>
-          <li>주요 연구 분야는 <b>[핵심 키워드 1], [핵심 키워드 2]</b>이며, 이를 통해 [연구 목적/비전]을 달성하고자 합니다.</li>
+          <li>I am a <b>[과정: 예: Ph.D. Student]</b> at <b>[학교명]</b> and a member of the <b>[연구실 이름]</b>.</li>
+          <li>My research focuses on <b>[주요 연구 키워드 1]</b> and <b>[주요 연구 키워드 2]</b> for [연구의 궁극적인 목표].</li>
+          <li>I am particularly interested in [세부 관심 분야: 예: Robust perception, Human-Robot Interaction].</li>
         </ul>
       </div>
     </section>
 
     <section id="education">
-      <h2>학력 (Education)</h2>
+      <h2>Education</h2>
       <ul>
-        <li><b>[학교명]</b> — [학위명: 예: 공학박사] ([시작연도] – [종료연도 또는 현재])</li>
-        <li><b>[학교명]</b> — [학위명: 예: 공학학사] ([시작연도] – [종료연도])</li>
+        <li><b>[학교명]</b> — [학위명: 예: M.S./Ph.D. Integrated Course] ([시작연도] – Present)</li>
+        <li><b>[학교명]</b> — [학위명: 예: B.S. in Computer Science] ([시작연도] – [종료연도])</li>
       </ul>
     </section>
 
     <section id="research">
-      <h2>연구 관심 분야 (Research Interests)</h2>
+      <h2>Research Interests</h2>
       <ul>
-        <li>[관심 분야 1: 예: 컴퓨터 비전 및 딥러닝]</li>
-        <li>[관심 분야 2: 예: 자율주행 센서 퓨전]</li>
-        <li>[관심 분야 3: 예: 강화학습 기반 로봇 제어]</li>
+        <li>[연구 관심사 1: 예: Multi-modal Sensor Fusion]</li>
+        <li>[연구 관심사 2: 예: Deep Learning-based Perception]</li>
+        <li>[연구 관심사 3: 예: Autonomous Systems]</li>
       </ul>
     </section>
 
     <section id="publications">
-      <h2>주요 논문 (Selected Publications)</h2>
+      <h2>Selected Publications</h2>
       <ul class="pub-list">
-        
         <li>
           <div class="pub-row">
             <div class="pub-media">
@@ -111,54 +108,54 @@
               </a>
             </div>
             <div class="pub-content">
-              <div class="pub-paper-title">“[논문 제목을 입력하세요]”</div>
+              <div class="pub-paper-title">“[논문 제목]”</div>
               <div class="pub-authors">
-                <span class="me">[당신의 이름]</span>, 저자2, 저자3, 및 지도교수
+                <span class="me">[당신의 이름]</span>, [저자2], [저자3], and [저자4]
               </div>
               <div class="pub-venue">
-                [학회/저널 이름 (예: CVPR, IEEE T-ITS)], [연도]
+                [학회/저널 이름], [발표 시기/연도]
               </div>
               <div class="pub-links">
-                <a href="[PDF링크]" target="_blank">PDF</a>
-                <a href="[코드링크]" target="_blank">Code</a>
-                <a href="[영상링크]" target="_blank" class="video">Video</a>
+                <a href="[링크]" target="_blank">Publisher</a>
+                <a href="[링크]" target="_blank">arXiv</a>
+                <a href="[링크]" target="_blank" class="video">Video</a>
               </div>
             </div>
           </div>
         </li>
-        </ul>
+      </ul>
     </section>
 
     <section id="awards">
-      <h2>수상 내역 (Awards & Honors)</h2>
+      <h2>Awards & Honors</h2>
       <ul>
-        <li>🥇 [상 이름] — [주관 기관] ([연도])</li>
-        <li>🥈 [상 이름] — [주관 기관] ([연도])</li>
+        <li>🥇 [수상 명칭] — [시상 기관] ([연도])</li>
+        <li>🥈 [수상 명칭] — [시상 기관] ([연도])</li>
       </ul>
     </section>
 
     <section id="activities">
-      <h2>기타 활동 (Activities)</h2>
+      <h2>Academic & Extracurricular Activities</h2>
       <ul>
-        <li><b>[활동명: 예: OO학회 학생회원]</b> ([연도])</li>
-        <li><b>[활동명: 예: OO기업 인턴십]</b> — [담당 업무 간단 요약] ([연도])</li>
+        <li><b>[활동 명칭]</b><br>[활동 설명 및 역할 요약] ([연도])</li>
+        <li><b>[활동 명칭]</b><br>[활동 설명 및 역할 요약] ([연도])</li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>연락처 (Contact)</h2>
+      <h2>Contact</h2>
       <p class="contact">
-        📧 이메일: <a href="mailto:[이메일주소]">[이메일주소]</a><br>
-        💻 GitHub: <a href="https://github.com/[아이디]" target="_blank">github.com/[아이디]</a><br>
-        📚 Google Scholar: <a href="[구글스칼라링크]" target="_blank">Profile Link</a><br>
-        🔗 LinkedIn: <a href="[링크드인링크]" target="_blank">LinkedIn Profile</a>
+        📧 <a href="mailto:[이메일주소]">[이메일주소]</a><br>
+        💻 <a href="https://github.com/[아이디]" target="_blank">GitHub</a><br>
+        📚 <a href="[구글스칼라링크]" target="_blank">Google Scholar</a><br>
+        🔗 <a href="[링크드인링크]" target="_blank">LinkedIn</a>
       </p>
-      <p style="color:var(--muted);margin-top:10px; font-size: 0.9em;">Last updated: [업데이트 날짜]</p>
+      <p style="color:var(--muted);margin-top:10px; font-size: 0.9em;">Last updated: [마지막 업데이트 날짜]</p>
     </section>
   </main>
 
   <footer>
-    &copy; <span id="y"></span> [당신의 이름]. All rights reserved.
+    &copy; <span id="y"></span> [당신의 이름] · All rights reserved.
   </footer>
 
   <script>
