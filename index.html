@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sanghoon Lee — Academic Portfolio</title>
-  <meta name="description" content="Academic profile of Sanghoon Lee, graduated student at Seoul National University researching Robotics." />
+  <meta name="description" content="Academic profile of Sanghoon Lee, graduate student at Seoul National University researching robotics and energy-aware autonomy." />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,18 +64,22 @@
 <body>
   <header>
     <h1>Sanghoon Lee</h1>
-    <p>Seoul National University<br>Autonomous Robot Intelligence Laboratory (ARIL)</p>
+    <p>
+      Seoul National University<br>
+      Autonomous Robot Intelligence Laboratory (ARIL)
+    </p>
   </header>
 
   <main>
     <section id="about" style="display:flex;align-items:center;gap:30px;">
-      <img src="./img/LSH.jpg" alt="Sanghoon Lee" style="width:220px;height:220px;border-radius:50%; border:2px solid #e5e7eb;object-fit:cover;">
+      <img src="./LSH.jpg" alt="Sanghoon Lee" style="width:220px;height:220px;border-radius:50%; border:2px solid #e5e7eb;object-fit:cover;">
       <div>
         <h2>Welcome! 👋</h2>
         <ul style="list-style:none; margin-left:0;">
-          <li>I am a <b>M.S. Student</b> at <b>Seoul National University</b> and a member of the <b>Autonomous Robot Intelligence Laboratory (ARIL)</b>.</li>
-          <li>My research focuses on <b>Energy-aware Robot</b> and <b>[주요 연구 키워드 2]</b> for [연구의 궁극적인 목표].</li>
-          <li>I am particularly interested in [세부 관심 분야: 예: Robust perception, Human-Robot Interaction].</li>
+          <li>I am an M.S. student at Seoul National University and a member of the Autonomous Robot Intelligence Laboratory (ARIL).</li>
+          <li>My research focuses on energy-aware autonomy for long-horizon robotics, including planning and decision-making under task uncertainty.</li>
+          <li>I build systems that combine physics-based energy models, forecasting, and context-aware planning (e.g., Value of Energy and Energy-Value Map formulations).</li>
+          <li>Recently, I am also exploring foundation-model-based robot reasoning (LLM/VLM), scene-graph memory, and task decomposition for embodied agents.</li>
         </ul>
       </div>
     </section>
@@ -83,79 +87,146 @@
     <section id="education">
       <h2>Education</h2>
       <ul>
-        <li><b>[학교명]</b> — [학위명: 예: M.S./Ph.D. Integrated Course] ([시작연도] – Present)</li>
-        <li><b>[학교명]</b> — [학위명: 예: B.S. in Computer Science] ([시작연도] – [종료연도])</li>
+        <li><b>Seoul National University</b> — M.S. Student, Robotics / AI (<!-- TODO: program name -->) (<!-- TODO: start year --> – Present)</li>
+        <li><b><!-- TODO: Undergraduate University --></b> — B.S. in <!-- TODO: major --> (<!-- TODO: start year --> – <!-- TODO: end year -->)</li>
       </ul>
+      <!-- Optional: advisor/committee line -->
+      <!-- <p style="color:var(--muted); margin-top:10px; font-size:0.95em;">Advisor: <!-- TODO --></p> -->
     </section>
 
     <section id="research">
       <h2>Research Interests</h2>
       <ul>
-        <li>[연구 관심사 1: 예: Multi-modal Sensor Fusion]</li>
-        <li>[연구 관심사 2: 예: Deep Learning-based Perception]</li>
-        <li>[연구 관심사 3: 예: Autonomous Systems]</li>
+        <li>Long-horizon planning and decision-making under uncertainty (task arrivals, sparse supervision, real-world constraints)</li>
+        <li>Energy-aware robotics and sustainable autonomy (solar-powered robots / mobility systems)</li>
+        <li>Predictive energy modeling: integrating physics-based models with data-driven forecasting</li>
+        <li>LLM/VLM-based embodied agents: scene-graph memory, task decomposition, and context-aware reasoning</li>
+        <li>System-building for real-world autonomy: evaluation pipelines, telemetry-driven analysis, and reproducible experiments</li>
       </ul>
     </section>
 
     <section id="publications">
       <h2>Selected Publications</h2>
       <ul class="pub-list">
+
+        <!-- Paper / Manuscript 1 -->
         <li>
           <div class="pub-row">
             <div class="pub-media">
-              <a href="[링크]" target="_blank">
-                <img src="[논문_썸네일_이미지_경로]" alt="Paper Thumbnail" class="pub-thumb">
+              <a href="#" target="_blank">
+                <img src="./img/pubs/evmap_thumb.png" alt="Paper Thumbnail" class="pub-thumb">
               </a>
             </div>
             <div class="pub-content">
-              <div class="pub-paper-title">“[논문 제목]”</div>
+              <div class="pub-paper-title">“Energy-Value Map for Long-Horizon Autonomy under Task Uncertainty”</div>
               <div class="pub-authors">
-                <span class="me">[당신의 이름]</span>, [저자2], [저자3], and [저자4]
+                <span class="me">Sanghoon Lee</span>, <!-- TODO: co-authors -->
               </div>
               <div class="pub-venue">
-                [학회/저널 이름], [발표 시기/연도]
+                Manuscript in preparation (target venues: <!-- TODO: RA-L / IROS / ITSC etc. -->), 2026
               </div>
               <div class="pub-links">
-                <a href="[링크]" target="_blank">Publisher</a>
-                <a href="[링크]" target="_blank">arXiv</a>
-                <a href="[링크]" target="_blank" class="video">Video</a>
+                <a href="#" target="_blank">PDF</a>
+                <a href="#" target="_blank">arXiv</a>
+                <a href="#" target="_blank" class="video">Video</a>
               </div>
             </div>
           </div>
         </li>
+
+        <!-- Paper / Manuscript 2 -->
+        <li>
+          <div class="pub-row">
+            <div class="pub-media">
+              <a href="#" target="_blank">
+                <img src="./img/pubs/solar_tp_thumb.png" alt="Paper Thumbnail" class="pub-thumb">
+              </a>
+            </div>
+            <div class="pub-content">
+              <div class="pub-paper-title">“Solar-Powered Task & Path Planning with Forecast-Aware Energy Budgeting”</div>
+              <div class="pub-authors">
+                <span class="me">Sanghoon Lee</span>, <!-- TODO: co-authors -->
+              </div>
+              <div class="pub-venue">
+                Manuscript / system report in preparation, 2026
+              </div>
+              <div class="pub-links">
+                <a href="#" target="_blank">PDF</a>
+                <a href="#" target="_blank">Code</a>
+                <a href="#" target="_blank" class="video">Demo</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Paper / Project 3 (optional, if you want to include Limbov2-style work) -->
+        <li>
+          <div class="pub-row">
+            <div class="pub-media">
+              <a href="#" target="_blank">
+                <img src="./img/pubs/scenegraph_thumb.png" alt="Paper Thumbnail" class="pub-thumb">
+              </a>
+            </div>
+            <div class="pub-content">
+              <div class="pub-paper-title">“Context-Aware Humanoid Task Planning with Scene-Graph Memory and Foundation Models”</div>
+              <div class="pub-authors">
+                <span class="me">Sanghoon Lee</span>, <!-- TODO: co-authors -->
+              </div>
+              <div class="pub-venue">
+                Project page / manuscript in preparation, 2026
+              </div>
+              <div class="pub-links">
+                <a href="#" target="_blank">Project</a>
+                <a href="#" target="_blank">Code</a>
+                <a href="#" target="_blank" class="video">Video</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
       </ul>
+
+      <!-- If you prefer, rename this section to “Preprints & Manuscripts” until you have accepted papers -->
+      <!-- <p style="color:var(--muted); font-size:0.95em;">Note: Entries marked “in preparation” are work-in-progress.</p> -->
     </section>
 
     <section id="awards">
       <h2>Awards & Honors</h2>
       <ul>
-        <li>🥇 [수상 명칭] — [시상 기관] ([연도])</li>
-        <li>🥈 [수상 명칭] — [시상 기관] ([연도])</li>
+        <li><!-- TODO: award --> — <!-- TODO: institution --> (<!-- TODO: year -->)</li>
+        <li><!-- TODO: scholarship/competition --> — <!-- TODO --> (<!-- TODO: year -->)</li>
       </ul>
+      <!-- If you don’t have awards to list yet, you can replace this section with “Talks” or “Service”. -->
     </section>
 
     <section id="activities">
       <h2>Academic & Extracurricular Activities</h2>
       <ul>
-        <li><b>[활동 명칭]</b><br>[활동 설명 및 역할 요약] ([연도])</li>
-        <li><b>[활동 명칭]</b><br>[활동 설명 및 역할 요약] ([연도])</li>
+        <li><b>World Solar Challenge (WSC) — Strategy / Planning</b><br>
+            Designed energy-aware driving/planning logic (daily planning + short-horizon energy balance prediction) and supported real-world telemetry-driven evaluation. (2025)</li>
+
+        <li><b>Research & Engineering (Industry Collaboration)</b><br>
+            Worked on verification and system-level development related to high-performance computing / accelerator systems, including protocol-level validation and tooling. (<!-- TODO: year range -->)</li>
+
+        <li><b>Lab Seminars / Study Group</b><br>
+            Organized and contributed to robotics + foundation-model reading/implementation sessions (RAG/agents/system-building focus). (<!-- TODO: year -->)</li>
       </ul>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p class="contact">
-        📧 <a href="mailto:[이메일주소]">[이메일주소]</a><br>
-        💻 <a href="https://github.com/[아이디]" target="_blank">GitHub</a><br>
-        📚 <a href="[구글스칼라링크]" target="_blank">Google Scholar</a><br>
-        🔗 <a href="[링크드인링크]" target="_blank">LinkedIn</a>
+        📧 <a href="mailto:<!-- TODO: email -->"><!-- TODO: email --></a><br>
+        💻 <a href="https://github.com/<!-- TODO: github -->" target="_blank">GitHub</a><br>
+        📚 <a href="<!-- TODO: scholar link -->" target="_blank">Google Scholar</a><br>
+        🔗 <a href="<!-- TODO: linkedin -->" target="_blank">LinkedIn</a>
       </p>
-      <p style="color:var(--muted);margin-top:10px; font-size: 0.9em;">Last updated: [마지막 업데이트 날짜]</p>
+      <p style="color:var(--muted);margin-top:10px; font-size: 0.9em;">Last updated: January 2, 2026</p>
     </section>
   </main>
 
   <footer>
-    &copy; <span id="y"></span> [당신의 이름] · All rights reserved.
+    &copy; <span id="y"></span> Sanghoon Lee · All rights reserved.
   </footer>
 
   <script>
