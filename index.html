@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Byeonggyu Park — Academic Portfolio</title>
-  <meta name="description" content="Academic profile of Byeonggyu Park, Graduate Student at Seoul National University researching Non-Line-of-Sight (NLoS) Perception and Sensor Fusion for Robotics and Autonomous Systems." />
+  <title>[당신의 이름] — 학술 포트폴리오</title>
+  <meta name="description" content="[당신의 이름]의 학술 프로필, 연구 분야 및 성과를 소개합니다." />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -14,11 +15,11 @@
       --bg:#ffffff;
       --text:#111827;
       --muted:#4b5563;
-      --accent:#0f4c81;
+      --accent:#0f4c81; /* 포인트 컬러: 청색 계열 */
       --border:#e5e7eb;
       --link:#0f4c81;
       --card:#f9fafb;
-      --red:#b91c1c; /* title color */
+      --red:#b91c1c; /* 강조 컬러: 논문 제목 등 */
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Merriweather',serif;color:var(--text);background:var(--bg);line-height:1.7}
@@ -32,328 +33,136 @@
     li{margin:8px 0}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .pub{margin-bottom:18px}
-    .paper-title{font-weight:700}
-    .pub i{color:var(--muted)}
+    
+    /* Publications 스타일 */
+    .pub-list{list-style:none;margin-left:0;padding-left:0}
+    .pub-list > li{margin:25px 0}
+    .pub-row{display:flex;align-items:center;gap:20px}
+    .pub-media{width:190px;height:130px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .pub-thumb{max-width:100%;max-height:100%;border-radius:10px;border:1px solid var(--border);transition:transform 0.2s ease;object-fit:cover}
+    .pub-thumb:hover{transform:scale(1.02)}
+    .pub-content{flex:1}
+    .pub-paper-title{font-weight:700;margin-bottom:6px;line-height:1.35;color:var(--red)}
+    .pub-authors{font-size:0.95em;color:var(--muted);margin-bottom:2px}
+    .pub-authors .me{font-weight:700;color:var(--text)}
+    .pub-venue{color:var(--muted);font-style:italic;margin-bottom:8px}
+    .pub-links{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;font-family:'Inter',sans-serif;font-weight:600}
+    .pub-links a{padding:4px 12px;font-size:0.85em;color:var(--accent);border:1px solid var(--border);border-radius:999px;background:#f9fafb}
+    .pub-links a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .pub-links a.video{color:var(--red);border-color:#fca5a5;background:#fff5f5}
+    .pub-links a.video:hover{background:var(--red);color:#fff}
+
     footer{text-align:center;border-top:1px solid var(--border);margin-top:60px;padding:20px;color:var(--muted);font-size:14px}
-    .contact a{margin:0 8px;display:inline-block}
+    .contact a{margin-right:15px;display:inline-block}
 
-    /* =========================
-       Publications
-       - no bullets
-       - thumbnail centered vs text block
-       - title -> authors -> venue order
-       - link buttons
-       ========================= */
-    .pub-list{
-      list-style:none;
-      margin-left:0;
-      padding-left:0;
-    }
-    .pub-list > li{
-      margin:18px 0;
-    }
-    .pub-row{
-      display:flex;
-      align-items:center;
-      gap:18px;
-    }
-    .pub-media{
-      width:190px;
-      height:130px;
-      flex-shrink:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .pub-thumb{
-      max-width:100%;
-      max-height:100%;
-      width:auto;
-      height:auto;
-      object-fit:contain;
-      display:block;
-      border-radius:10px;
-      border:1px solid var(--border);
-      transition:transform 0.2s ease;
-    }
-    .pub-thumb:hover{ transform:scale(1.02); }
-
-    .pub-content{ flex:1; }
-
-    .pub-paper-title{
-      font-weight:700;
-      margin:2px 0 6px 0;
-      line-height:1.35;
-      color:var(--red);
-    }
-    .pub-authors{
-      font-size:0.97em;
-      color:var(--muted);
-      margin-bottom:2px;
-    }
-    .pub-authors .me{
-      font-weight:700;
-      color:var(--text);
-    }
-    .pub-venue{
-      color:var(--muted);
-      margin:2px 0;
-    }
-
-    /* Link buttons */
-    .pub-links{
-      margin-top:10px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      font-family:'Inter',sans-serif;
-      font-weight:600;
-    }
-    .pub-links a{
-      display:inline-block;
-      padding:4px 10px;
-      font-size:0.85em;
-      color:var(--accent);
-      border:1px solid var(--border);
-      border-radius:999px;
-      background:#f9fafb;
-      text-decoration:none;
-      transition:all 0.15s ease;
-    }
-    .pub-links a:hover{
-      background:var(--accent);
-      color:#ffffff;
-      border-color:var(--accent);
-      text-decoration:none;
-    }
-    .pub-links a.video{
-      color:var(--red);
-      border-color:#fca5a5;
-      background:#fff5f5;
-    }
-    .pub-links a.video:hover{
-      background:var(--red);
-      border-color:var(--red);
-      color:#ffffff;
+    /* 모바일 대응 */
+    @media (max-width: 600px) {
+      .pub-row { flex-direction: column; align-items: flex-start; }
+      #about { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Byeonggyu Park</h1>
-    <p>Seoul National University<br>Autonomous Robot Intelligence Laboratory (ARIL)</p>
+    <h1>[당신의 이름]</h1>
+    <p>[학교명/연구소명]<br>[학과 또는 연구실 이름]</p>
   </header>
 
   <main>
-    <section id="about" style="display:flex;align-items:center;gap:20px;">
-      <img src="imgs/profile3.jpg" alt="Byeonggyu Park" style="width:250px;height:250px;border:2px solid #e5e7eb;object-fit:cover;">
+    <section id="about" style="display:flex;align-items:center;gap:30px;">
+      <img src="[프로필_이미지_경로]" alt="[당신의 이름]" style="width:220px;height:220px;border-radius:50%; border:2px solid #e5e7eb;object-fit:cover;">
       <div>
-        <h2>Welcome to Byeonggyu’s Homepage! 👋</h2>
-        <ul style="margin-left:20px;">
-          <li>
-            I am a graduate student at <b>Seoul National University</b> and a member of the
-            <b>
-              <a href="https://arisnu.squarespace.com/" target="_blank">
-                Autonomous Robot Intelligence Laboratory (ARIL)
-              </a>
-            </b>.
-          </li>
-          <li>My research focuses on <b>Non-Line-of-Sight (NLoS) object detection and scene understanding</b> through <b>multi-modal sensor fusion</b> across radar, camera, LiDAR, and acoustic modalities for robust perception in autonomous systems.</li>
-          <li>My broader interests include <b>physics-aware perception and learning</b>, <b>intelligent robotic systems</b>, and <b>human–robot interaction</b>.</li>
+        <h2>안녕하세요! 👋</h2>
+        <ul style="list-style:none; margin-left:0;">
+          <li>저는 <b>[학교명]</b>에서 <b>[과정: 예: 석박사 통합과정]</b> 중인 [당신의 이름]입니다.</li>
+          <li>현재 <b>[연구실 이름]</b>에서 <b>[지도교수님 성함]</b> 교수님의 지도 아래 연구하고 있습니다.</li>
+          <li>주요 연구 분야는 <b>[핵심 키워드 1], [핵심 키워드 2]</b>이며, 이를 통해 [연구 목적/비전]을 달성하고자 합니다.</li>
         </ul>
       </div>
     </section>
 
     <section id="education">
-      <h2>Education</h2>
+      <h2>학력 (Education)</h2>
       <ul>
-        <li><b>Seoul National University</b> — Integrated M.S./Ph.D. (2025 – Present)</li>
-        <li><b>Kookmin University</b> — B.S. in Computer Science (2018 – 2024)</li>
+        <li><b>[학교명]</b> — [학위명: 예: 공학박사] ([시작연도] – [종료연도 또는 현재])</li>
+        <li><b>[학교명]</b> — [학위명: 예: 공학학사] ([시작연도] – [종료연도])</li>
       </ul>
     </section>
 
     <section id="research">
-      <h2>Research Interests</h2>
+      <h2>연구 관심 분야 (Research Interests)</h2>
       <ul>
-        <li>Non-Line-of-Sight (NLoS) Object Detection and Scene Understanding</li>
-        <li>Sensor Fusion across Radar, Camera, LiDAR, and Acoustic Modalities</li>
-        <li>Physics-Aware Perception and Learning for Multi-Modal Sensing</li>
-        <li>Intelligent Robotic Systems and Human–Robot Interaction (HRI)</li>
+        <li>[관심 분야 1: 예: 컴퓨터 비전 및 딥러닝]</li>
+        <li>[관심 분야 2: 예: 자율주행 센서 퓨전]</li>
+        <li>[관심 분야 3: 예: 강화학습 기반 로봇 제어]</li>
       </ul>
     </section>
 
     <section id="publications">
-      <h2>Selected Publications</h2>
-
+      <h2>주요 논문 (Selected Publications)</h2>
       <ul class="pub-list">
-        <!-- Paper 1 (Video) -->
+        
         <li>
-          <div class="pub pub-row">
+          <div class="pub-row">
             <div class="pub-media">
-              <a href="https://www.youtube.com/watch?v=LXkU1HAPSBQ" target="_blank">
-                <img src="imgs/IROS_Graphical_abstract.png" alt="Video Demo" class="pub-thumb">
+              <a href="[링크]" target="_blank">
+                <img src="[논문_썸네일_이미지_경로]" alt="Paper Thumbnail" class="pub-thumb">
               </a>
             </div>
-
             <div class="pub-content">
-              <div class="pub-paper-title">
-                “mmWave Radar-Based Non-Line-of-Sight Pedestrian Localization at T-Junctions Utilizing Road Layout Extraction via Camera.”
-              </div>
-
+              <div class="pub-paper-title">“[논문 제목을 입력하세요]”</div>
               <div class="pub-authors">
-                <span class="me">Byeonggyu Park</span>, Hee-Yeun Kim, Byonghyok Choi, Hansang Cho,
-                Byungkwan Kim, Soomok Lee, Mingu Jeon, and Seong-Woo Kim
+                <span class="me">[당신의 이름]</span>, 저자2, 저자3, 및 지도교수
               </div>
-
               <div class="pub-venue">
-                <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct. 2025</i>
+                [학회/저널 이름 (예: CVPR, IEEE T-ITS)], [연도]
               </div>
-
               <div class="pub-links">
-                <a href="https://ieeexplore.ieee.org/document/11246461" target="_blank">IEEE</a>
-                <a href="https://arxiv.org/abs/2508.02348" target="_blank">arXiv</a>
-                <a href="https://www.youtube.com/watch?v=LXkU1HAPSBQ" target="_blank" class="video">Video</a>
+                <a href="[PDF링크]" target="_blank">PDF</a>
+                <a href="[코드링크]" target="_blank">Code</a>
+                <a href="[영상링크]" target="_blank" class="video">Video</a>
               </div>
             </div>
           </div>
         </li>
-
-        <!-- Paper 2 (Video) -->
-        <li>
-          <div class="pub pub-row">
-            <div class="pub-media">
-              <a href="https://www.youtube.com/watch?v=qIgP9w6GB9o" target="_blank">
-                <img src="imgs/IROS_2025_2.png" alt="Video Demo" class="pub-thumb">
-              </a>
-            </div>
-
-            <div class="pub-content">
-              <div class="pub-paper-title">
-                “Radar-Based NLoS Pedestrian Localization for Darting-Out Scenarios Near Parked Vehicles with Camera-Assisted Point Cloud Interpretation.”
-              </div>
-
-              <div class="pub-authors">
-                Hee-Yeun Kim, <span class="me">Byeonggyu Park</span>, Byonghyok Choi, Hansang Cho,
-                Byungkwan Kim, Soomok Lee, Mingu Jeon, Seung-Woo Seo, and Seong-Woo Kim
-              </div>
-
-              <div class="pub-venue">
-                <i>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Oct. 2025</i>
-              </div>
-
-              <div class="pub-links">
-                <a href="https://ieeexplore.ieee.org/document/11246930" target="_blank">IEEE</a>
-                <a href="https://arxiv.org/abs/2508.04033" target="_blank">arXiv</a>
-                <a href="https://www.youtube.com/watch?v=qIgP9w6GB9o" target="_blank" class="video">Video</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Paper 3 (No Video) -->
-        <li>
-          <div class="pub pub-row">
-            <div class="pub-media">
-              <a href="https://ieeexplore.ieee.org/document/11097630" target="_blank">
-                <img src="imgs/IV_2025.png" alt="Paper Thumbnail" class="pub-thumb">
-              </a>
-            </div>
-
-            <div class="pub-content">
-              <div class="pub-paper-title">
-                “Non-Line-of-Sight Multi-Target Localization in T-Junctions Using Ray Tracing of mmWave Radar.”
-              </div>
-
-              <div class="pub-authors">
-                Mingu Jeon, <span class="me">Byeonggyu Park</span>, Hee-Yeun Kim, Yujeong Kang,
-                Byonghyok Choi, Hansang Cho, Byungkwan Kim, Soomok Lee,
-                Seung-Woo Seo, and Seong-Woo Kim
-              </div>
-
-              <div class="pub-venue">
-                <i>IEEE Intelligent Vehicle Symposium (IV), June 2025</i>
-              </div>
-
-              <div class="pub-links">
-                <a href="https://ieeexplore.ieee.org/document/11097630" target="_blank">IEEE</a>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Paper 4 (Video) -->
-        <li>
-          <div class="pub pub-row">
-            <div class="pub-media">
-              <a href="https://www.youtube.com/watch?v=TTrg3_sEC64" target="_blank">
-                <img src="imgs/TITS_2025.png" alt="Video Demo" class="pub-thumb">
-              </a>
-            </div>
-
-            <div class="pub-content">
-              <div class="pub-paper-title">
-                “Non-Line-of-Sight Vehicle Localization based on Sound.”
-              </div>
-
-              <div class="pub-authors">
-                Mingu Jeon, Jae-Kyung Cho, Hee-Yeun Kim, <span class="me">Byeonggyu Park</span>,
-                Seung-Woo Seo, and Seong-Woo Kim
-              </div>
-
-              <div class="pub-venue">
-                <i>IEEE Transactions on Intelligent Transportation Systems, Vol. 26, No. 2, pp. 2321–2338, Feb. 2025.</i>
-              </div>
-
-              <div class="pub-links">
-                <a href="https://ieeexplore.ieee.org/document/10790925" target="_blank">IEEE</a>
-                <a href="https://www.youtube.com/watch?v=TTrg3_sEC64" target="_blank" class="video">Video</a>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+        </ul>
     </section>
 
     <section id="awards">
-      <h2>Awards & Honors</h2>
+      <h2>수상 내역 (Awards & Honors)</h2>
       <ul>
-        <li>🥇 Grand Prize (1st place) — Scale-Car-Based Autonomous Driving Competition</li>
-        <li>🥈 2nd Place (President’s Award) — 2023 Baemin Autonomous Driving Challenge</li>
-        <li>🌟 Innovation Award — Future Mobility Urban Challenge (Seoul National University)</li>
-        <li>🥇 Grand prize (1st place) & 🌟 Special Award — 2023 HL Mando & HL Klemove Autonomous Mobility Challenge</li>
+        <li>🥇 [상 이름] — [주관 기관] ([연도])</li>
+        <li>🥈 [상 이름] — [주관 기관] ([연도])</li>
       </ul>
     </section>
 
     <section id="activities">
-      <h2>Academic & Extracurricular Activities</h2>
+      <h2>기타 활동 (Activities)</h2>
       <ul>
-        <li><b>World Solar Challenge 2025 — SNU Solo Team</b><br>Strategy team member, responsible for real-time telemetry, route optimization, and energy management for solar-powered vehicles.</li>
-        <li><b>UCI Internship — Platoon of Autonomous Vehicles</b><br>University of California, Irvine (2022). Research internship on multi-vehicle platooning and autonomous control strategies.</li>
-        <li><b>Mentor — Samsung SDS Smart Hackathon</b><br>Guided participants in algorithm design and community problem-solving prototyping (2021).</li>
-        <li><b>FOSCAR — Autonomous Driving Club</b><br>Developed perception and control systems for a 1/4-scale autonomous vehicle (2022–2024).</li>
+        <li><b>[활동명: 예: OO학회 학생회원]</b> ([연도])</li>
+        <li><b>[활동명: 예: OO기업 인턴십]</b> — [담당 업무 간단 요약] ([연도])</li>
       </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>연락처 (Contact)</h2>
       <p class="contact">
-        📧 <a href="mailto:bg.park@snu.ac.kr">bg.park@snu.ac.kr</a><br>
-        💻 <a href="https://github.com/Bingurrr">GitHub</a><br>
-        📚 <a href="https://scholar.google.com/citations?user=3PMUIP8AAAAJ&hl=ko">Google Scholar</a><br>
-        🔗 <a href="https://www.linkedin.com/in/byeonggyu-park-a8056a365/">LinkedIn</a>
+        📧 이메일: <a href="mailto:[이메일주소]">[이메일주소]</a><br>
+        💻 GitHub: <a href="https://github.com/[아이디]" target="_blank">github.com/[아이디]</a><br>
+        📚 Google Scholar: <a href="[구글스칼라링크]" target="_blank">Profile Link</a><br>
+        🔗 LinkedIn: <a href="[링크드인링크]" target="_blank">LinkedIn Profile</a>
       </p>
-      <p style="color:var(--muted);margin-top:6px">Last updated: October 2025</p>
+      <p style="color:var(--muted);margin-top:10px; font-size: 0.9em;">Last updated: [업데이트 날짜]</p>
     </section>
   </main>
 
   <footer>
-    © <span id="y"></span> Byeonggyu Park · All rights reserved.
+    &copy; <span id="y"></span> [당신의 이름]. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('y').textContent=new Date().getFullYear();
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
